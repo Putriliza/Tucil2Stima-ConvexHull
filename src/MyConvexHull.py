@@ -2,7 +2,7 @@ import numpy as np
 
 def orientation(p1, p2, p3):
     """
-        prekondisi: p1, p2, dan p3 merupakan array yang terdefenisi, merepresentasikan titik-titik
+        prekondisi: p1, p2, dan p3 merupakan array yang terdefenisi, merepresentasikan titik
         proses: Menentukan posisi titik p3 terhadap garis p1p2 berdasarkan determinan
     """
     det = p1[0]*p2[1] + p2[0]*p3[1] + p3[0]*p1[1] - p3[0]*p2[1] - p2[0]*p1[1] - p1[0]*p3[1]
@@ -31,8 +31,9 @@ def pointMax(sub, p1, p2):
 
 def addHull(sub, pBegin, pEnd):
     """
-        prekondisi: array sub tidak kosong
-                    pBegin dan pEnd merupakan array yang terdefenisi, merepresentasikan titik-titik
+        prekondisi: array sub terdefenisim boleh kosong
+                    pBegin dan pEnd merupakan array yang terdefenisi, merepresentasikan titik
+                    dan merupakan convex hull yang sudah diketahui di sisi tersebut
         proses: menentukan convex hull pada suatu bagian, dilakukan secara rekursif
     """
     if len(sub) == 0:
@@ -53,7 +54,7 @@ def addHull(sub, pBegin, pEnd):
 
 def myConvexHull(points):
     """
-        prekondisi: array points tidak kosong, minimal terdapat 2 titik
+        prekondisi: array points terdefenisi, minimal terdapat 2 titik
         proses: melakukan divide and conquer untuk menentukan convex hull keseluruhan
     """
     points = points[np.lexsort((points[:, 1], points[:, 0]))]

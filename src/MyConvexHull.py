@@ -31,7 +31,7 @@ def pointMax(sub, p1, p2):
 
 def addHull(sub, pBegin, pEnd):
     """
-        prekondisi: array sub terdefenisim boleh kosong
+        prekondisi: array sub terdefenisi, boleh kosong
                     pBegin dan pEnd merupakan array yang terdefenisi, merepresentasikan titik
                     dan merupakan convex hull yang sudah diketahui di sisi tersebut
         proses: menentukan convex hull pada suatu bagian, dilakukan secara rekursif
